@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="addDivButton">ช่วยกดฉันที</button>
+    <div id="container"></div>
+
+    <script>
+        const button = document.getElementById('addDivButton');
+        const container = document.getElementById('container');
+
+        button.addEventListener('click', () => {
+            // สร้าง div ใหม่
+            const newDiv = document.createElement('div');
+            newDiv.textContent = 'เปิดหาพ่อมึงอ่อไอ้ควาย';
+            newDiv.style.padding = '10px';
+            newDiv.style.margin = '10px 0';
+            newDiv.style.border = '1px solid black';
+
+            // เพิ่ม div เข้าไปใน container
+            container.appendChild(newDiv);
+        });
+    </script>
+    <script>
+    // Create a new div element
+    var newDiv = document.createElement("div"); 
+    // Give your new div some content
+    var newContent = document.createTextNode("Hi there and greetings!");
+    // Add an id attribute to the new div
+    newDiv.setAttribute("id", "newDiv");
+    // Create another text node
+    var additionalContent = document.createTextNode(" Welcome to the site!");
+    // Append the additional text node to the new div
+    newDiv.appendChild(additionalContent);
+    // Add the text node to the newly created div
+    newDiv.appendChild(newContent);
+
+    // Add the newly created element and its content into the DOM
+    var currentDiv = document.getElementById("div1"); 
+    document.body.insertBefore(newDiv, currentDiv);
+    </script>
+
+</body>
+</html>
